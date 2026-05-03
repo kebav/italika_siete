@@ -3,12 +3,12 @@
 $id=$_POST['id'];
 $nombre=$_POST['nombre'];
 $precio=$_POST['precio'];
-$cantidad=$_POST['cantidad'];
+$stock=$_POST['stock'];
 
-$sql="UPDATE articulos SET
+$sql="UPDATE productos SET
 nombre='$nombre',
 precio='$precio',
-cantidad='$cantidad'
+stock='stock'
 WHERE id=$id";
 
 mysqli_query($conexion,$sql);
