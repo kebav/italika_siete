@@ -18,6 +18,6 @@ echo "Registro guardado";
 <form method="POST">
 Nombre:<input type="text" name="nombre"><br>
 Precio:<input type="text" name="precio"><br>
-Cantidad:<input type="text" name="stock"><br>
+Stock:<input type="text" name="stock"><br>
 <input type="submit" value="Guardar">
 </form>
