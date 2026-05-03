@@ -18,7 +18,7 @@ Precio:
 <input type="text" name="precio" value="<?php echo $f['precio']; ?>"><br>
 
 Cantidad:
-<input type="text" name="cantidad" value="<?php echo $f['cantidad']; ?>"><br>
+<input type="text" name="stock" value="<?php echo $f['stock']; ?>"><br>
 
 <input type="submit" value="Actualizar">
 
