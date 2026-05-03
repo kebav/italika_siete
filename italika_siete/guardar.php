@@ -11,7 +11,8 @@ VALUES('$nombre','$precio','$stock')";
 
 mysqli_query($conexion,$sql);
 
-echo "Registro guardado";
+header("Location: admin.php");
+exit();
 }
 ?>
 
