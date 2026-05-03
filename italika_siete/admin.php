@@ -9,7 +9,7 @@
 <th>ID</th>
 <th>Nombre</th>
 <th>Precio</th>
-<th>Cantidad</th>
+<th>Stock</th>
 </tr>
 
 <?php
@@ -23,7 +23,7 @@ while($fila=mysqli_fetch_array($resultado)){
 <td><?php echo $fila['id']; ?></td>
 <td><?php echo $fila['nombre']; ?></td>
 <td><?php echo $fila['precio']; ?></td>
-<td><?php echo $fila['cantidad']; ?></td>
+<td><?php echo $fila['stock']; ?></td>
 
 <td>
 <a href="editar.php?id=<?php echo $fila['id']; ?>">Editar</a>
