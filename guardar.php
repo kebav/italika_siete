@@ -1,24 +1,191 @@
-<?php include("conexion.php");
+<?php
+include("conexion.php");
 
 if($_POST){
 
-$nombre=$_POST['nombre'];
-$precio=$_POST['precio'];
-$stock=$_POST['stock'];
+    $nombre = $_POST['nombre'];
+    $precio = $_POST['precio'];
+    $stock = $_POST['stock'];
 
-$sql="INSERT INTO productos(nombre,precio,stock)
-VALUES('$nombre','$precio','$stock')";
+    $sql = "INSERT INTO productos(nombre,precio,stock)
+    VALUES('$nombre','$precio','$stock')";
 
-mysqli_query($conexion,$sql);
+    mysqli_query($conexion, $sql);
 
-header("Location: admin.php");
-exit();
+    header("Location: admin.php");
+    exit();
 }
 ?>
 
-<form method="POST">
-Nombre:<input type="text" name="nombre"><br>
-Precio:<input type="text" name="precio"><br>
-Stock:<input type="text" name="stock"><br>
-<input type="submit" value="Guardar">
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuevo Producto | Axel Gabriel</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:520px;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 6px 25px rgba(0,0,0,.08);
+}
+
+.title{
+    color:#003b75;
+    font-size:36px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:35px;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:bold;
+    color:#333;
+}
+
+input[type="text"]{
+    width:100%;
+    padding:16px;
+    border:1px solid #dcdcdc;
+    border-radius:14px;
+    font-size:16px;
+    margin-bottom:25px;
+    outline:none;
+    transition:.2s;
+}
+
+input[type="text"]:focus{
+    border-color:#0a5abf;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:16px;
+    border-radius:14px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+    font-size:16px;
+}
+
+.save{
+    background:#003b75;
+    color:white;
+}
+
+.save:hover{
+    transform:translateY(-2px);
+}
+
+.cancel{
+    background:#e8edf5;
+    color:#003b75;
+}
+
+.cancel:hover{
+    transform:translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">
+        Nuevo Producto
+    </h1>
+
+    <p class="subtitle">
+        Registra un nuevo producto en el sistema
+    </p>
+
+    <form method="POST">
+
+        <label>
+            Nombre del producto
+        </label>
+
+        <input
+        type="text"
+        name="nombre"
+        placeholder=""
+        required>
+
+        <label>
+            Precio
+        </label>
+
+        <input
+        type="text"
+        name="precio"
+        placeholder=""
+        required>
+
+        <label>
+            Stock disponible
+        </label>
+
+        <input
+        type="text"
+        name="stock"
+        placeholder=""
+        required>
+
+        <div class="buttons">
+
+            <button type="submit" class="btn save">
+                Guardar producto
+            </button>
+
+            <a href="admin.php" class="btn cancel">
+                Cancelar
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
