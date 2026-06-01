@@ -222,7 +222,7 @@ th,td{
 <div class="container">
 
     <h1 class="title">
-        Panel de Administración
+        Panel de Administración Axel
     </h1>
 
     <p class="subtitle">
