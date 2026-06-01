@@ -142,7 +142,7 @@ input:focus{
     </h1>
 
     <p class="subtitle">
-        Accede al panel administrativo Axel
+        Ingresa tus credenciales de Administrador
     </p>
 
     <?php if($error!=""){ ?>
