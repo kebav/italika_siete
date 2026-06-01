@@ -273,7 +273,7 @@ nav{
 
         <p>
             Encuentra refacciones confiables, accesibles y productos esenciales
-            para mantener tu motocicleta lista para cualquier recorrido.
+            para mantener tu motocicleta lista para cualquier recorrido, sin preocuparse de nada.
         </p>
 
         <div class="hero-buttons">
