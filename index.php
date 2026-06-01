@@ -298,7 +298,7 @@ nav{
 <section class="section" id="productos">
 
     <h2 class="section-title">
-        Productos Destacados
+        Productos De Ejemplo
     </h2>
 
     <div class="products">
