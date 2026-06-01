@@ -160,7 +160,7 @@ input:focus{
         <input
         type="text"
         name="user"
-        placeholder="Ingresa tu correo"
+        placeholder="Ingresa tu correo o usuario"
         required>
 
         <label>
